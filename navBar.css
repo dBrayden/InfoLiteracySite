@@ -20,7 +20,7 @@
     /*background: #333;*/
     border-bottom-right-radius: 35px;
     border-top-right-radius: 35px;
-    position: fixed;
+    position:fixed;
     background-color: var(--navBar-color);
 
 }
@@ -45,23 +45,27 @@ li a:hover, .dropDown:hover, .dropBtn{
     color:var(--nav-text-color);
 }
 li.dropDown{
+    position: relative;
     display: inline-block;
+    
 }
 .dropDownContent{
     display: none;
     float:left;
-    position: absolute;
+    position: fixed;
     background-color: var(--navBar-color);
     width:fit-content;
     z-index: 1;
-    position:fixed;
+    /*position:fixed;*/
 
 }
 /*content in the dropdown menu*/
 .dropDownContent a {
-    display: block;
     color: white;
     text-decoration: none;
+        display: block;
+
+
 
 }
 .dropDownContent a:hover{ background-color: var(--navBar-color); color:var(--nav-text-color);}
