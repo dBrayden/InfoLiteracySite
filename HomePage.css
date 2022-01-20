@@ -1,0 +1,187 @@
+
+
+:root{
+    --header-color: #A34B9D ;
+    --button-color: #8FB13E ;
+    --section-color: #8FB13E;
+}
+/*#FDB130*/
+/*#8FB13E*/
+/*#A34B9D*/
+
+
+body{
+
+ font-family: sans-serif;
+}
+
+
+
+.header{
+    /*padding: 40px;*/
+    padding-top: 40px;
+    padding-right: 40px;
+    text-align: center;
+    color: var(--header-color);
+    /*text-shadow: 10px 10px 10px grey;*/
+}
+
+
+
+body{
+    margin:0;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+/*NavBar*/
+/*ul{*/
+
+
+/*    list-style-type: none;*/
+/*    padding:0;*/
+/*    margin: 0;*/
+/*    overflow: hidden;*/
+/*    background: #333;*/
+
+/*}*/
+/*li{*/
+/*    float: left;*/
+/*}*/
+/*li a, .dropBtn{*/
+/*    display: inline-block;*/
+/*    color: white;*/
+/*    text-align: left;*/
+/*    padding: 14px 16px;*/
+/*    text-decoration: none;*/
+/*}*/
+/*li a:hover, .dropDown:hover, .dropBtn{*/
+/*    background-color: slategray;*/
+/*    color:gold;*/
+/*}*/
+/*li.dropDown{*/
+/*    display: inline-block;*/
+/*}*/
+/*.dropDownContent{*/
+/*    display: none;*/
+/*    position: absolute;*/
+/*    background-color: #333333;*/
+/*    min-width: 160px;*/
+/*    z-index: 1;*/
+
+/*}*/
+/*!*content in the dropdown menu*!*/
+/*.dropDownContent a {*/
+/*    display: block;*/
+/*    color: white;*/
+/*    text-decoration: none;*/
+
+/*}*/
+/*.dropDownContent a:hover{ background-color: #8FB13E; color:gold; transition-duration: 0.5s}*/
+
+/*.dropDown:hover .dropDownContent { display: block; }*/
+/*.dropDown:hover .dropBtn{*/
+/*    width: fit-content;*/
+/*    height: fit-content;*/
+/*    background-color: slategray;*/
+/*}*/
+
+/*.button{*/
+/*    border-radius: 35px;*/
+/*    background-color: #FDB130;*/
+/*    color:white;*/
+/*    text-align: center;*/
+/*    text-decoration: none;*/
+/*    padding: 8px 8px;*/
+/*    width: 200px;*/
+/*    height:150px;*/
+
+/*}*/
+/*first section of homepage*/
+
+.colBackground{
+    box-shadow: 10px 10px 10px 5px grey;
+    background:white;
+    margin-top: 10px;
+    padding:20px;
+    height:300px;
+}
+.colBackground2{
+    box-shadow: 10px 10px 10px 5px grey;
+    background:white;
+    margin-top: 10px;
+    padding:20px;
+    height: 300px;
+}
+
+.columnRight{
+    float: left;
+    width:22.5%;
+
+}
+.columnLeft{
+    float: left;
+    width: 70%;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+
+}
+.columnLeftLogo{
+    float: left;
+    width: 25%;
+    padding-left: 2.5%;
+    margin-top: 50px;
+    /*padding-right: 2.5%;*/
+
+}
+.columnLeftLogo img{
+    width: 300px;
+}
+.columnRightLogo{
+    float: left;
+    width:22.5%;
+    /*padding-right: 200px;*/
+
+}
+.row:after{
+    content:"";
+    display: table;
+    clear: both;
+}
+.sectionDivider{
+    float: left;
+    width: 100%;
+    /*padding-left: 2.5%;*/
+    /*padding-right: 2.5%;*/
+}
+.sectionColor{
+    background: var(--section-color);
+    margin-top: 100px;
+    height: 600px;
+}
+.leftButton{
+    float: left;
+    width: fit-content;
+    padding-left: 33.33%;
+    padding-right: 2.5%;
+}
+.rightButton{
+    float: right;
+    width: fit-content;
+    padding-left: 2.5%;
+    padding-right: 33.33%;
+
+}
+
+.buttonBackground {
+    box-shadow: 7px 7px 7px 3px grey;
+    padding: 10px;
+    background: var(--button-color);
+    margin-top: 100px;
+    border-radius: 35px;
+}
+.buttonBackground a:hover{
+    color: #FDB130;
+    transition-duration: 0.5s;
+}

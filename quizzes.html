@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale = 1.0">
+    <title>Quiz</title>
+    <link rel="icon" href="pageIcon.png">
+</head>
+
+<!--<link rel="stylesheet" href="quizzes.css">-->
+<link rel="stylesheet" href="quizBackground.css">
+<link rel="stylesheet" href="navBar.css">
+<link rel="stylesheet" href="generalPageStyle.css">
+<script src="progressBar.js"></script>
+<script src="quizzes.js"></script>
+<script src="correctQuestion.js"></script>
+
+<body>
+
+<!--<h1>-->
+<!--    &lt;!&ndash;        <progress value="50" max="100" ></progress>&ndash;&gt;-->
+<!--</h1>-->
+
+
+
+<ul class="navbar" style="width: 1200px;">
+
+    <li class="dropDown", class="dropBtn"><a>Menu</a>
+        <div class="dropDownContent">
+            <a href = "HomePage.html">Home</a>
+            <a id="q1" onclick='questionChange("q1")'>Question One</a>
+            <a id="q2" onclick='questionChange("q2")'>Question Two</a>
+            <a id="q3" onclick = 'questionChange("q3")'>Question Three</a>
+            <a id="q4" onclick='questionChange("q4")'>Question Four</a>
+            <a id="q5" onclick='questionChange("q5")'>Question Five</a>
+
+            <!--Copy for adding new question link-->
+            <!--            <a id="q" onclick='questionChange("q")'>Question</a>-->
+        </div>
+    </li>
+    <li>
+        <canvas id="progressBar" width="1000" height="10" style="border: 1px solid slategray; margin-left: 10%;
+            border-radius: 50px"></canvas>
+
+        <script>
+            const barCanvas = document.getElementById("progressBar")
+            const barInside = barCanvas.getContext("2d")
+
+            const bar = barInside.createLinearGradient(0,0,1000,0)
+            bar.addColorStop(0,"#FDB130")
+            bar.addColorStop(1,"#FDB130")
+            barInside.fillStyle = bar
+            // barInside.fillRect(0,0,filledAmount,10)
+
+
+
+        </script>
+    </li>
+
+
+
+    <!--    <button onclick="fillBar(); barInside.fillRect(0,0,filledAmount,10);">Click Me</button>-->
+    <!--    <button onclick="barInside.clearRect(0,0,1000,10);setCurrentPercent();">Reset</button>-->
+
+</ul>
+
+<div style="background-color: var(--navBar-color); padding: 3%;"></div>
+
+<H1 style="padding: 2%; color:#FDB130; background-color: #333; width: fit-content; border-radius: 35px" id="currentQuestionName">Question One
+
+
+</H1>
+<div class="questionRow">
+    <div class="questionColLeft">
+        <div style="width: 100%; background:#333; margin: 5px; border-radius: 35px; padding-bottom:20px" >
+        <p id="question" style="background-color: #333; color: white; padding: 20px; width: 66.66%; border-radius: 35px">
+            <a href = "https://www.theonion.com/smart-home-security-camera-conspires-with-burglars-in-e-1848233907"
+               target = "_blank">
+                Story "Smart Home Security Camera Conspires With Burglars In Exchange For Half The Loot"  </a> <br>
+            <a href = "https://www.theonion.com/smart-home-security-camera-conspires-with-burglars-in-e-1848233907/"
+               style="font-size:15px;" id="link" target = "_blank">Here is the link to click</a>
+
+        </p>
+
+        <!-- creates the layout for the answers, explanation and image sections on the page-->
+    </div>
+    <div class="questionColRight">
+    </div>
+</div>
+<div class="row" >
+    <div class="columnLeft">
+        <ul id = "answers" class="answersStyle">
+            <p id="questionType"></p>
+            <button class = "buttonHover" id="A1" onclick="showAnswer(0,questionOn);barInside.fillRect(0,0,filledAmount,10);" >
+                It is a true article.
+            </button>
+            <button id="A2" onclick="showAnswer(1,questionOn);barInside.fillRect(0,0,filledAmount,10);">
+                It is a fake article.
+            </button>
+            <button id="A3" style="visibility: hidden">
+                It’s fake because this contradicts facts you already know
+            </button>
+            <button id="A4" style="visibility: hidden">
+                It’s fake because the source is unreliable
+            </button>
+
+
+        </ul>
+
+    </div>
+    <div class="columnRight">
+        <img id="imageOne" style="visibility: hidden; " src="">
+        <img id="imageTwo" style="visibility: hidden;" src="">
+    </div>
+    <div class="columnMid">
+        <p id="Answer" ></p>
+        <!--        <button id="explain" style="visibility: hidden;" onclick="showExplanation(questionOn)">explanation</button>-->
+        <p id = "explanation"></p>
+        <button id="nextQuestion" style="visibility: hidden;" onclick="nextQuestion()" >Question</button>
+
+
+
+    </div>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Credibility</title>
+<!--    <link rel="stylesheet" href="Credibility.css">-->
+    <link rel="stylesheet" href="TopicsDesign.css">
+    <link rel="stylesheet" href="quizBackground.css">
+    <link rel="stylesheet" href="navBar.css">
+    <link rel="stylesheet" href="generalPageStyle.css">
+    <link rel="icon" href="pageIcon.png">
+
+    <script src="progressBar.js"></script>
+    <script src="changeQuestionCredibility.js"></script>
+    <script src="correctQuestion.js"></script>
+</head>
+<body>
+<ul class="navbar" style="width: 1200px;">
+
+<li class="dropDown", class="dropBtn"><a>Menu</a>
+    <div class="dropDownContent">
+        <a href = "HomePage.html">Home</a>
+        <a id="q1" onclick='questionChange("q1")'>Credibility: Example One</a>
+
+
+        <!--Copy for adding new question link-->
+        <!--            <a id="q" onclick='questionChange("q")'>Question</a>-->
+    </div>
+</li>
+<li>
+    <canvas id="progressBar" width="1000" height="10" style="border: 1px solid slategray; margin-left: 10%;
+            border-radius: 50px"></canvas>
+
+    <script>
+        const barCanvas = document.getElementById("progressBar")
+        const barInside = barCanvas.getContext("2d")
+
+        const bar = barInside.createLinearGradient(0,0,1000,0)
+        bar.addColorStop(0,barColor)
+        bar.addColorStop(1,barColor)
+        barInside.fillStyle = bar
+        // barInside.fillRect(0,0,filledAmount,10)
+    </script>
+</li>
+
+
+
+<!--    <button onclick="fillBar(); barInside.fillRect(0,0,filledAmount,10);">Click Me</button>-->
+<!--    <button onclick="barInside.clearRect(0,0,1000,10);setCurrentPercent();">Reset</button>-->
+
+</ul>
+
+<div style="background-color: var(--navBar-color); padding: 3%;"></div>
+<H1 style="padding: 1%; color:#FDB130; background-color: #333; width: fit-content; border-radius: 35px" id="currentQuestionName">Credibility: Example One
+
+
+</H1>
+<div class="questionRow">
+    <div class="questionColLeft">
+        <p id="question" style="background-color: #333; color: white; padding: 30px; width: 66.66%; border-radius: 35px;
+margin-left:160px; font-size: 31px;">
+            While checking out various websites, you come across an article with the title “Eating Chocolate Every
+            Day Reduces Risk of Cancer, Canadian Study Finds”. As a chocolate lover yourself, this is information
+            you’re interested in. Should you:
+        </p>
+
+        <!-- creates the layout for the answers, explanation and image sections on the page-->
+    </div>
+    <div class="questionColRight">
+    </div>
+</div>
+<div class="row" >
+    <div class="columnLeft">
+        <ul id = "answers" class="answersStyle">
+            <p id="questionType"></p>
+            <button class = "buttonHover" id="A1" onclick="showAnswer(0,questionOn);barInside.fillRect(0,0,filledAmount,10);" >
+                Take this article title as 100% true without reading the article itself
+            </button>
+            <button id="A2" onclick="showAnswer(1,questionOn);barInside.fillRect(0,0,filledAmount,10);">
+                Skim the article and then decide if the title is true
+            </button>
+            <button id="A3" onclick="showAnswer(2,questionOn);barInside.fillRect(0,0,filledAmount,10);">
+                Read the whole article and then decide if the title is true
+            </button>
+
+        </ul>
+    </div>
+    <div class="columnRight">
+        <img id="imageOne" style="visibility: hidden; " src="">
+        <img id="imageTwo" style="visibility: hidden;" src="">
+    </div>
+    <div class="columnMid">
+        <p id="Answer" ></p>
+        <!--        <button id="explain" style="visibility: hidden;" onclick="showExplanation(questionOn)">explanation</button>-->
+        <p id = "explanation"></p>
+        <button id="nextQuestion" style="visibility: hidden;" onclick="nextQuestion()" >Question</button>
+        <a id="nextTopic" href="Sources.html" style="visibility: hidden;"><button
+                id="nextTopicButton" style="visibility: hidden;">Sources</button></a>
+    </div>
+</div>
+</body>
+</html>

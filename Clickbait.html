@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ClickBait</title>
+<!--    <link rel="stylesheet" href="Clickbait.css">-->
+<!--    <link rel="stylesheet" href="TopicsDesign.css">-->
+    <link rel="icon" href="pageIcon.png">
+    <link rel="stylesheet" href="quizBackground.css">
+    <link rel="stylesheet" href="navBar.css">
+    <link rel="stylesheet" href="generalPageStyle.css">
+    <script src="progressBar.js"></script>
+    <script src="changeQuestionClickbait.js"></script>
+    <script src="correctQuestion.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale = 1.0">
+</head>
+<body>
+<ul class="navbar" style="width: 1200px;">
+
+    <li class="dropDown", class="dropBtn"><a>Menu</a>
+        <div class="dropDownContent">
+            <a href = "HomePage.html">Home</a>
+            <a id="q1" onclick='questionChange("q1")'> Clickbait: Example One</a>
+            <a id="q2" onclick='questionChange("q2")'>Clickbait: Example Two</a>
+            <a id="q3" onclick='questionChange("q3")'>Clickbait: Example Three</a>
+
+
+            <!--Copy for adding new question link-->
+            <!--            <a id="q" onclick='questionChange("q")'>Question</a>-->
+        </div>
+    </li>
+    <li>
+        <canvas id="progressBar" width="1000" height="10" style="border: 1px solid slategray; margin-left: 10%;
+            border-radius: 50px"></canvas>
+
+        <script>
+            const barCanvas = document.getElementById("progressBar")
+            const barInside = barCanvas.getContext("2d")
+
+            const bar = barInside.createLinearGradient(0,0,1000,0)
+            bar.addColorStop(0,"#FDB130")
+            bar.addColorStop(1,"#FDB130")
+            barInside.fillStyle = bar
+            // barInside.fillRect(0,0,filledAmount,10)
+
+
+
+        </script>
+    </li>
+
+
+
+    <!--    <button onclick="fillBar(); barInside.fillRect(0,0,filledAmount,10);">Click Me</button>-->
+    <!--    <button onclick="barInside.clearRect(0,0,1000,10);setCurrentPercent();">Reset</button>-->
+
+</ul>
+
+<div style="background-color: var(--navBar-color); padding: 3%;"></div>
+<H1 style="padding: 1%; color:#FDB130; background-color: #333; width: fit-content; border-radius: 35px" id="currentQuestionName">Clickbait: Example One
+
+
+</H1>
+<div class="questionRow">
+    <div class="questionColLeft">
+        <p id="question" style="background-color: #333333; color: white; padding: 30px; width: 66.66%; border-radius: 35px;
+margin-left:160px; font-size: 31px;">
+            For this example imagine you are a baseball fan and your favorite team, the
+            Yellow Canaries, recently lost your favorite player Homer Un. This has been the
+            main focus of your searches on the internet for a while now and one day on
+            social media you come across a brand-new article titled “Homer Un Makes a
+            Big Return to the Yellow Canaries”. You go to this article and find it’s from a
+            unofficial website you’ve never seen before. The article looks as though it could be real though.
+        </p>
+
+        <!-- creates the layout for the answers, explanation and image sections on the page-->
+    </div>
+    <div class="questionColRight">
+    </div>
+</div>
+<div class="row" >
+    <div class="columnLeft">
+        <ul id = "answers" class="answersStyle">
+            <p id="questionType"></p>
+            <button class = "buttonHover" id="A1" onclick="showAnswer(0,questionOn);barInside.fillRect(0,0,filledAmount,10);" >
+                It’s real because the article information looks trustworthy
+            </button>
+            <button id="A2" onclick="showAnswer(1,questionOn);barInside.fillRect(0,0,filledAmount,10);">
+                It’s real because it is brand new
+            </button>
+            <button id="A3" onclick="showAnswer(2,questionOn);barInside.fillRect(0,0,filledAmount,10);">
+                It’s fake because this contradicts facts you already know
+            </button>
+            <button id="A4" onclick="showAnswer(3,questionOn);barInside.fillRect(0,0,filledAmount,10);">
+                It’s fake because the source is unreliable
+            </button>
+
+
+        </ul>
+
+    </div>
+    <div class="columnRight">
+        <img id="imageOne" style="visibility: hidden; " src="">
+        <img id="imageTwo" style="visibility: hidden;" src="">
+<!--        <button id="nextImg" style="visibility: hidden" onclick="switchImage()">Next Image</button>-->
+
+    </div>
+    <div class="columnMid">
+        <p id="Answer" ></p>
+        <!--        <button id="explain" style="visibility: hidden;" onclick="showExplanation(questionOn)">explanation</button>-->
+        <p id = "explanation"></p>
+        <button id="nextQuestion" style="visibility: hidden;" onclick="nextQuestion()" >Question</button>
+        <a id="nextTopic" href="Credibility.html" style="visibility: hidden;"><button
+                id="nextTopicButton" style="visibility: hidden;"> Credibility</button></a>
+    </div>
+</div>
+</body>
+</html>

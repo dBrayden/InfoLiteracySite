@@ -1,0 +1,127 @@
+body{
+
+    font-family: sans-serif;
+}
+
+
+
+.header{
+    /*padding: 40px;*/
+    padding-top: 40px;
+    padding-right: 40px;
+    text-align: center;
+    color: #A34B9D;
+    /*text-shadow: 10px 10px 10px grey;*/
+}
+
+
+
+body{
+    margin:0;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+/*NavBar*/
+ul{
+
+
+    list-style-type: none;
+    padding:0;
+    margin: 0;
+    overflow: hidden;
+    background: #333;
+
+}
+li{
+    float: left;
+}
+li a, .dropBtn{
+    display: inline-block;
+    color: white;
+    text-align: left;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+li a:hover, .dropDown:hover, .dropBtn{
+    background-color: slategray;
+    color:gold;
+}
+li.dropDown{
+    display: inline-block;
+}
+.dropDownContent{
+    display: none;
+    position: absolute;
+    background-color: #333333;
+    min-width: 160px;
+    z-index: 1;
+
+}
+/*content in the dropdown menu*/
+.dropDownContent a {
+    display: block;
+    color: white;
+    text-decoration: none;
+
+}
+.dropDownContent a:hover{ background-color: #8FB13E; color:gold; transition-duration: 0.5s}
+
+.dropDown:hover .dropDownContent { display: block; }
+.dropDown:hover .dropBtn{
+    width: fit-content;
+    height: fit-content;
+    background-color: slategray;
+}
+
+
+
+
+
+
+
+
+.columnLeft{
+    /*background-color: #8FB13E;*/
+    float: left;
+    width:fit-content;
+    /*padding-right: 2.5%;*/
+    /*padding-top:5%;*/
+    /*padding-bottom: 5%;*/
+    /*padding-left: 1.5%;*/
+    /*border-top-left-radius: 35px;*/
+    /*border-bottom-left-radius: 35px;*/
+    margin-left: 43%;
+    /*margin-right: 5%;*/
+
+
+
+
+    /*box-shadow: 7px 7px 7px 3px grey;*/
+}
+/*.columnRight{*/
+/*    border-radius: 35px;*/
+/*    background-color: #8FB13E;*/
+/*    !*float: right;*!*/
+/*    !*width:25%;*!*/
+/*    !*padding:2.5%;*!*/
+/*    !*margin-right: 5%;*!*/
+/*    margin-left: 20%;*/
+
+
+/*}*/
+
+
+.buttonLook{
+    padding: 10px;
+    display:block;
+    width: fit-content;
+    border-color: #A34B9D;
+    border-radius: 15px;
+    font-size: 10px;
+    background-color: white;
+    transition-duration: 0.5s;
+
+}
+

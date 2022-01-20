@@ -1,0 +1,241 @@
+/**
+
+ */
+body{
+    /*background: #8FB13E;*/
+    /* background: #A34B9D;*/
+    font-family: sans-serif;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+
+h1 button{
+    padding: 10px;
+    display:block;
+    width:fit-content;
+    border-color: #A34B9D;
+    border-radius: 15px;
+    font-size: 25px;
+    background-color: white;
+    transition-duration: 0.5s;
+    margin: 3px;
+}
+h1 button:hover{
+    transition-duration: 0.5s;
+    background-color: #A34B9D;
+    color: white;
+}
+
+.navbar{
+
+
+    list-style-type: none;
+    padding:0;
+    margin: 0;
+    overflow: hidden;
+    width: 63%;
+    background: #333;
+    border-bottom-right-radius: 35px;
+    border-top-right-radius: 35px;
+    position: fixed;
+
+}
+li{
+    float: left;
+}
+.navbar canvas{
+    margin-top: 15px;
+}
+li a, .dropBtn{
+    display: inline-block;
+    color: white;
+    text-align: left;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+li a:hover, .dropDown:hover, .dropBtn{
+    background-color: slategray;
+    color:gold;
+}
+li.dropDown{
+    display: inline-block;
+}
+.dropDownContent{
+    display: none;
+    float:left;
+    position: absolute;
+    background-color: slategray;
+    width:fit-content;
+    z-index: 1;
+    position:fixed;
+
+}
+/*content in the dropdown menu*/
+.dropDownContent a {
+    display: block;
+    color: white;
+    text-decoration: none;
+
+}
+.dropDownContent a:hover{ background-color: slategray; color:gold;}
+
+.dropDown:hover .dropDownContent { display: block; }
+.dropDown:hover .dropBtn{
+    width: fit-content;
+    height: fit-content;
+    background-color: slategray;
+}
+p{
+    /*padding-left: 2.5%;*/
+    /*padding-right: 2.5%;*/
+    /*padding-top: 20px;*/
+    font-size: 28px;
+
+}
+/*.colBackground{*/
+/*    !*box-shadow: 10px 10px 10px 5px grey;*!*/
+/*    background:white;*/
+/*    margin-top: 10px;*/
+/*    padding:20px;*/
+/*    height:300px;*/
+/*}*/
+/*.colBackground2{*/
+/*    !*box-shadow: 10px 10px 10px 5px grey;*!*/
+/*    background:white;*/
+/*    margin-top: 10px;*/
+/*    padding:20px;*/
+/*    height: 300px;*/
+/*}*/
+.columnLeft{
+    /*background-color: #8FB13E;*/
+    float: left;
+    width:25%;
+    padding-right: 2.5%;
+    padding-top:5%;
+    padding-bottom: 5%;
+    padding-left: 1.5%;
+    /*border-top-left-radius: 35px;*/
+    /*border-bottom-left-radius: 35px;*/
+
+
+
+
+
+    /*box-shadow: 7px 7px 7px 3px grey;*/
+}
+.columnMid{
+    background-color: #8FB13E;
+    float: left;
+    width: 25%;
+    /*padding-left: 2.5%;*/
+    /*border-top-right-radius: 35px;*/
+    /*border-bottom-right-radius: 35px;*/
+    margin-left: 4.5%;
+    margin-right: 2.5%;
+    height: fit-content;
+
+}
+
+.columnRight{
+    border-radius: 35px;
+    background-color: #8FB13E;
+    float: right;
+    width:25%;
+    padding:2.5%;
+    margin-right: 5%;
+
+
+}
+.columnMid button{
+    padding: 10px;
+    display:block;
+    width: 400px;
+    border-color: #A34B9D;
+    border-radius: 15px;
+    font-size: 25px;
+    background-color: white;
+    transition-duration: 0.5s;
+    margin: 3px;
+}
+.columnMid button:hover{
+    transition-duration: 0.5s;
+    background-color: #A34B9D;
+    color: white;
+
+}
+.row{
+    background: #8FB13E;
+    /*padding-left: 5%;*/
+    border-radius: 35px;
+    height: fit-content;
+    padding-bottom: 2.5%;
+
+}
+.row:after{
+    padding-left: 10%;
+    content:"";
+    display: table;
+    clear: both;
+
+
+}
+.answersStyle{
+    list-style-type: none;
+}
+.answersStyle button{
+    padding: 10px;
+    display:block;
+    width: 400px;
+    border-color: #A34B9D;
+    border-radius: 15px;
+    font-size: 25px;
+    background-color: white;
+    transition-duration: 0.5s;
+    /*margin: 3px;*/
+
+}
+.answersStyle button:hover{
+    transition-duration: 0.5s;
+    background-color: #A34B9D;
+    color: white;
+}
+.navbar button{
+    /*text-align: center;*/
+    display: block;
+    border: none;
+    background-color: slategray;
+    color: white;
+    padding: 14px 16px;
+    font-size: 15px;
+}
+.navbar button:hover{
+    /*background-color: #8FB13E;*/
+    color: #FDB130;
+    transition-duration: 0.5s;
+}
+.questionRow{
+    max-height: 400px;
+    /*background: #A34B9D;*/
+}
+.questionRow:after{
+    padding-left: 10%;
+    content:"";
+    display: table;
+    clear: both;
+
+}
+.questionColLeft{
+    /*width: 66%;*/
+    float: left;
+}
+.questionColRight{
+    /*background: #FDB130;*/
+    float: right;
+    width: 5%;
+    max-height: 400px;
+    /*margin-right: 20%;*/
+    /*padding:5%;*/
+
+}

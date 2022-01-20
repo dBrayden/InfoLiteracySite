@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<!--Created for tips of the day, no current use-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale = 1.0">
+    <title>Title</title>
+</head>
+
+<link rel="stylesheet" href="Opinions%20and%20Bias.css">
+<script src="quizzes.js"></script>
+<script src="Opinions%20and%20Bias.js"></script>
+
+<body>
+
+<h1>
+    <!--        <progress value="50" max="100" ></progress>-->
+
+</h1>
+
+
+
+<ul class="navbar" style="width: 1200px;">
+
+    <li class="dropDown", class="dropBtn"><a href = "HomePage.html">Home</a>
+        <div class="dropDownContent">
+            <!--            <a id="Sources" onclick='questionChange("Sources")'>Sources</a>-->
+            <!--            <a id="Opinions and Bias" onclick='questionChange("Opinions and Bias")'>Opinions and Bias</a>-->
+            <!--            <a id="Clictbait" onclick='questionChange("Clictbait")'>Clictbait</a>-->
+            <a href = "Credibility.html" id = "Credibility" target = "_self">Credibility</a>
+            <a href = "Sources.html" id = "Sources" target = "_self">Sources</a>
+            <a href = "Clickbait.html" id = "Clickbait" target = "_self">Clickbait</a>
+            <!--            <a href="#" id="questionOne" target = "_self">Question One</a>-->
+            <!--            <a href="#" id="questionTwo" target = "_self">Question Two</a>-->
+            <!--            <a href="#" id="questionThree" target = "_slef">Question Three</a>-->
+            <!--            <a href="#" id="questionFour" target = "_self">Question Four</a>-->
+        </div>
+    </li>
+    <li>
+        <canvas id="progressBar" width="1000" height="10" style="border: 1px solid slategray; margin-left: 10%;
+            border-radius: 50px"></canvas>
+
+        <script>
+            const barCanvas = document.getElementById("progressBar")
+            const barInside = barCanvas.getContext("2d")
+
+            const bar = barInside.createLinearGradient(0,0,1000,0)
+            bar.addColorStop(0,"#8FB13E")
+            bar.addColorStop(1,"#8FB13E")
+            barInside.fillStyle = bar
+            // barInside.fillRect(0,0,filledAmount,10)
+
+
+
+        </script>
+    </li>
+
+
+
+    <!--    <button onclick="fillBar(); barInside.fillRect(0,0,filledAmount,10);">Click Me</button>-->
+    <!--    <button onclick="barInside.clearRect(0,0,1000,10);setCurrentPercent();">Reset</button>-->
+
+</ul>
+<div style = "background-color:black ; padding : 2%;"></div>
+
+
+<H1 style="padding: 2%; color:#FDB130; background-color: #333; width: fit-content; border-radius: 35px" id="currentQuestionName">
+    Opinions and Bias
+
+
+</H1>
+<p id="Options and bias" style="background-color: #333; color: white; padding: 20px; width: 66.66%; border-radius: 35px">
+    <!--    Examples goes here            This is a example.</p>-->Pre-reading: While scrolling through
+    the internet on your phone, you come across an article titled “Given the Choice, 95% of People Would
+    Choose the Color Purple Over Pink.” You’re a little skeptical of these numbers as someone who has
+    pink everything. Should you:<br>
+    Questions / responses to picking that option:
+
+
+
+
+<div class="row" >
+    <div class="columnLeft" >
+        <ul id = "answers" class="answersStyle">
+            <p id="questionType"></p>
+            <button class = "buttonHover" id="A1" onclick="showAnswer(0,questionOn);barInside.fillRect(0,0,filledAmount,10);" >
+                a) Check to see if this is an opinion piece
+            </button>
+            <button id="A2" onclick="showAnswer(1,questionOn);barInside.fillRect(0,0,filledAmount,10);">
+                b) Look into the survey that makes the claim.
+            </button>
+            <button id="A3" onclick="showAnswer(2,questionOn);barInside.fillRect(0,0,filledAmount,10);">
+                c) Bush the article off as false information because you disagree.
+            </button>
+            <button id="A4"  style="visibility: hidden">
+                A4
+            </button>
+        </ul>
+    </div>
+    <div class="columnMid">
+        <img id="imageOne" style="visibility: hidden; " src="SkewedGraph.PNG">
+        <img id="imageTwo" style="visibility: hidden;" src="UnSkewedGraph.PNG">
+    </div>
+    <div class="columnRight">
+
+        <p id="Answer"></p>
+        <button id="explain" style="visibility: hidden;" onclick="showExplanation(questionOn)">explanation</button>
+        <button id="nextQuestion" style="visibility: hidden" onclick="" >Question</button>
+        <p id = "explanation"></p>
+
+    </div>
+</div>
+
+
+</body>
+</html>

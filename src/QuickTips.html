@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quick Tips</title>
+    <link rel="icon" href="pageIcon.png">
+</head>
+<link   rel="stylesheet" href = "QuickTips.css">
+<link rel="stylesheet" href="navBar.css">
+<link rel="stylesheet" href="generalPageStyle.css">
+<script src="changeTip.js"></script>
+<body>
+
+<ul>
+    <li><a href="HomePage.html" style="color: #FDB130">HOME</a></li>
+
+    <li class="dropDown", class="dropBtn"><a >TOPICS</a>
+        <div class="dropDownContent">
+            <a href="Credibility.html" target="_self">Credibility</a>
+            <a href="Sources.html" target = "_self">Sources</a>
+            <a href="Options and Bias.html" target = "_self" >Opinions and Bias</a>
+            <a href="Clickbait.html" target = "_self">Clickbait</a>
+        </div>
+    </li>
+
+    <li class="dropDown", class="dropBtn"><a href = HowToPage.html>HOW TO</a>
+        <div class="dropDownContent">
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+        </div>
+    </li>
+
+    <li><a href = aboutUsPage.html style="float: right" >ABOUT US</a></li>
+</ul>
+
+<!--location of title -->
+<div style="background-color:black;color:white;padding:20px;width:1000px;height:100px;margin:20px; margin-inline:auto;
+     text-align: center; border-radius: 35px">
+    <h1 style="font-family: sans-serif;font-size: xxx-large;color: #FDB130">Quick Tips</h1>
+</div>
+
+<!--location of subtitle -->
+<div style="font-family: sans-serif;text-align: center; border-color: #8FB13E; border-radius: 50px;
+margin: 20px; margin-inline: auto; margin-top: 30px;border-inline: #8FB13E;padding: 20px;
+background-color: #8FB13E; width:1000px; max-width: 50%">
+    <h2 style="color: white">It can be hard to spot falsified information in our time.
+        These tips will help you sort the real from the fake.
+
+    </h2>
+    <div class="columnLeft">
+        <button class="buttonLook" id="prev" onclick="prevTip()">Previous Tip</button>
+    </div>
+    <button class="buttonLook" id="next" onclick="nextTip()">Next Tip</button>
+
+
+
+</div>
+<!--location of tips -->
+<div style="margin-top: 60px;" >
+    <p id="tips" style="text-align: center; font-size: xx-large; font-family: sans-serif;background-color: #8FB13E;
+     border-radius: 10px; margin-left: 300px;margin-right: 300px; margin-top: 30px;
+height: fit-content; padding: 50px; color: white">
+        Before clicking on a website immediately after looking up a piece of information, stop for
+        a moment and read. What primarily shows up? Are the links that appear leading to major
+        news sites or strange blogs? Make sure to read the sections below the links for more
+        information on what the sites talk about and also be aware that the top site is not
+        necessarily the most trustworthy.
+    </p>
+</div>
+</body>
+</html>
