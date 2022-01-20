@@ -52,7 +52,7 @@ li.dropDown{
 .dropDownContent{
     display: none;
     float:left;
-    position: sticky;
+    position: static;
     background-color: var(--navBar-color);
     width:fit-content;
     z-index: 1;
